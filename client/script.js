@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch response
-  const response = await fetch("https://codex-isxw.onrender.com/", {
+  const response = await fetch("https://chat-gpt-codex-sigma.vercel.app/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
