@@ -76,8 +76,10 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
+  // console.log(data)
+
   // fetch response
-  const response = await fetch("https://codex-isxw.onrender.com/", {
+  const response = await fetch("http://localhost:5000", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -86,6 +88,7 @@ const handleSubmit = async (e) => {
       prompt: data.get("prompt"),
     }),
   });
+
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = "";
